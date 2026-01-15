@@ -1,0 +1,140 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ html,body{
+  height: 100%;
+  width: 100%;
+  font-family: Montserrat, sans-serif;
+ }
+
+ :root{
+    --c1:#454A4D;
+    --c2:#181a1b;
+    --c3:#fff;
+    --c4:#cfc2c2a1;
+
+     
+ }
+ .main{
+    /* height: 100vh; */
+    width: 100%;
+    display: grid;
+    grid-template-columns: 250px 1fr  ;
+    grid-template-rows: 50px 35px  1fr 50px  ;
+    grid-template-areas: 'header header  '
+                          'nav    nav'
+                          'aside  section '
+                          'footer  footer';
+
+ }
+
+ .header{
+    grid-area:header;
+    width: 100%;
+    background-color:var(--c1);
+    text-align: center;
+    padding: 5px;
+    color: var(--c3);
+    
+ }
+ .nav{
+    grid-area: nav;
+    width: 100%;
+    background-color:var(--c4) ;
+      display: flex;
+     align-items: center;
+     justify-content: center;
+     border-bottom: 1px solid #000;
+     
+
+ }
+ .nav ol{
+    list-style: none;
+     display: flex;
+     gap: 40px;
+ }
+.nav ol li{
+    font-weight: 500;
+    font-size: 16px;
+}
+ 
+ 
+
+  .aside{
+    grid-area: aside;
+    width: 100%;
+    background-color:var(--c4);
+   
+    
+ }
+ .aside h3{
+    font-size: 25px;
+    padding: 15px 15px;
+ }
+.aside ol{
+     list-style: none;
+  padding: 0px 10px; 
+     
+}
+ .aside li{ 
+      padding: 10px 10px;
+  border-bottom: 2px solid rgba(194, 193, 193, 0.974);
+     
+ }
+
+.section{
+    grid-area: section;
+    width: 100%;
+    padding: 10px 20px;
+ }
+ .section h2{
+    padding: 15px 0px;
+    font-size: 25px;
+ }
+ .section .images{
+    width: 100%;
+     display: flex;
+     padding: 10px 0px;
+     /* align-items: center; */
+     justify-content: center;
+     gap: 10px;
+
+ }
+  .section .images img{
+    width: 290px;
+    height: 380px;
+    object-fit: cover;
+    
+  }
+ .section p{
+    font-size: 16px;
+    font-weight: 300;
+    
+ }
+.section h3 {
+  padding: 10px 0px;
+}
+.section ul {
+  padding-bottom: 10px;
+  padding-left: 70px;
+}
+.section ul li > p {
+ font-weight: 500;
+}
+#last{
+    padding-top:10px;
+    font-size: 16px;
+}
+  .footer{
+    grid-area: footer;
+    width: 100%;
+    background-color: var(--c1);
+    text-align: center;
+    padding: 15px;
+    font-size: 18px;
+    color: var(--c3);
+    
+ }
+ 
